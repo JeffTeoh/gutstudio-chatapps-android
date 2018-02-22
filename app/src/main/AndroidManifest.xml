@@ -22,7 +22,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".chatboxexample" />
         <activity
             android:name=".chatbox"
             android:label="@string/title_activity_chatbox"
