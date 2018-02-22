@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">chatapps-android</string>
+    <string name="welcome">WELCOME!</string>
+    <string name="login">LOGIN</string>
 </resources>
