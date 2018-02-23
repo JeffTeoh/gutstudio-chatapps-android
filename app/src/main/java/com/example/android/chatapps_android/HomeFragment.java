@@ -39,7 +39,7 @@ public class HomeFragment extends Fragment {
                     @Override
                     public void onRefresh() {
                         ((tabviewChatbox) getActivity()).refreshNow();
-                        Toast.makeText(getContext(), "Refresh Layout working", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getContext(), "Refreshed", Toast.LENGTH_LONG).show();
                     }
                 }
         );
