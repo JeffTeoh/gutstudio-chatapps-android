@@ -31,7 +31,6 @@ public class tabviewChatbox extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Chat Apps");
-        getSupportActionBar().setIcon(R.drawable.ic_search_black_24dp);
 
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         viewPager = (ViewPager) findViewById(R.id.viewPager);
