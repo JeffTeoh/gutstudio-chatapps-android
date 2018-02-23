@@ -29,22 +29,22 @@ public class AwayFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_away, container, false);
         // Inflate the layout for this fragment
         String[] awayStrings = {
-                "gas",
-                "cook",
-                "Sunset",
-                "MidMorning",
-                "Good Morning",
-                "Breakfast",
-                "MidMorning",
-                "Lunch",
-                "Afternoon",
-                "Sunset",
-                "Supper Time",
-                "Lunch",
-                "Afternoon",
-                "Supper Time",
-                "Lovely Night",
-                "Chilly Dreams"
+                "Noah",
+                "Emma",
+                "Liam",
+                "Olivia",
+                "Jason",
+                "Ava",
+                "William",
+                "Isabella",
+                "Ethan",
+                "James",
+                "Abigail",
+                "Alex",
+                "Kelvin",
+                "Daniel",
+                "Michael",
+                "Michelle"
         };
 
         ListView lv = (ListView) view.findViewById(R.id.listView2);
