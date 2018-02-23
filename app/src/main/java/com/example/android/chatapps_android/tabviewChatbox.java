@@ -6,6 +6,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 
 public class tabviewChatbox extends AppCompatActivity {
     Toolbar toolbar;
@@ -28,6 +30,8 @@ public class tabviewChatbox extends AppCompatActivity {
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Chat Apps");
+        getSupportActionBar().setIcon(R.drawable.ic_search_black_24dp);
 
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         viewPager = (ViewPager) findViewById(R.id.viewPager);
@@ -38,10 +42,18 @@ public class tabviewChatbox extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.tabviewtoolbar, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
     public void refreshNow (){
         finish();
         overridePendingTransition( 0, 0);
         startActivity(getIntent());
         overridePendingTransition( 0, 0);
     }
+
+
 }
