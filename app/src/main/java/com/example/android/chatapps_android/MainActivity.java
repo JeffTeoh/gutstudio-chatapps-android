@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void chatbox (View view){
-        final Intent intent = new Intent(this, chatbox.class);
+        final Intent intent = new Intent(this, tabviewChatbox.class);
         fbLoginManager = com.facebook.login.LoginManager.getInstance();
         callbackManager = CallbackManager.Factory.create();
 

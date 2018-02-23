@@ -25,7 +25,8 @@
         <activity
             android:name=".chatbox"
             android:label="@string/title_activity_chatbox"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".tabviewChatbox"></activity>
     </application>
 
 </manifest>
