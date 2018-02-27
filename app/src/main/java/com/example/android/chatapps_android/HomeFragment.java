@@ -28,8 +28,6 @@ public class HomeFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_home, container, false);
         // Inflate the layout for this fragment
 
-        ImageView imageView = (ImageView) v.findViewById(R.id.image);
-        imageView.setImageResource(R.drawable.com_facebook_button_icon_blue);
 
 
         final SwipeRefreshLayout mSwipeRefreshLayout = (SwipeRefreshLayout) v.findViewById(R.id.fragment_home);
