@@ -1,6 +1,9 @@
 package com.example.android.chatapps_android;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
+import android.support.v4.view.LayoutInflaterCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +18,8 @@ import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
+import com.mikepenz.iconics.context.IconicsContextWrapper;
+import com.mikepenz.iconics.context.IconicsLayoutInflater2;
 
 import org.json.JSONObject;
 
@@ -25,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     CallbackManager callbackManager;
     GraphRequest graphRequest;
     com.facebook.login.LoginManager fbLoginManager;
+    Button bLogin;
 
     @Override
     protected void onActivityResult (int requestCode, int resultCode, Intent data) {
@@ -43,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         fbLoginManager = com.facebook.login.LoginManager.getInstance();
         callbackManager = CallbackManager.Factory.create();
 
-        Button bLogin = (Button) findViewById(R.id.bLogin);
+        bLogin = (Button) findViewById(R.id.bLogin);
 
         LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
@@ -83,5 +89,10 @@ public class MainActivity extends AppCompatActivity {
         parameters.putString("fields", "id,email,birthday,friends");
         graphRequest.setParameters(parameters);
         graphRequest.executeAsync();
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(IconicsContextWrapper.wrap(newBase));
     }
 }
