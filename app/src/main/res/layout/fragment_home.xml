@@ -9,6 +9,7 @@
     tools:context="com.example.android.chatapps_android.tabviewChatbox">
 
     <GridLayout
+        android:id="@+id/mainGrid"
         android:columnCount="2"
         android:rowCount="3"
         android:alignmentMode="alignMargins"
@@ -83,7 +84,7 @@
 
 
                 <TextView
-                    android:text="Noah"
+                    android:text="Adam"
                     android:textAlignment="center"
                     android:textColor="@android:color/black"
                     android:textSize="18dp"
@@ -122,7 +123,7 @@
 
 
                 <TextView
-                    android:text="Noah"
+                    android:text="Warlock"
                     android:textAlignment="center"
                     android:textColor="@android:color/black"
                     android:textSize="18dp"
@@ -159,7 +160,7 @@
 
 
                 <TextView
-                    android:text="Noah"
+                    android:text="Amy"
                     android:textAlignment="center"
                     android:textColor="@android:color/black"
                     android:textSize="18dp"
@@ -198,7 +199,7 @@
 
 
                 <TextView
-                    android:text="Noah"
+                    android:text="Felicia"
                     android:textAlignment="center"
                     android:textColor="@android:color/black"
                     android:textSize="18dp"
@@ -233,7 +234,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:text="Noah"
+                    android:text="John"
                     android:textAlignment="center"
                     android:textColor="@android:color/black"
                     android:textSize="18dp"
