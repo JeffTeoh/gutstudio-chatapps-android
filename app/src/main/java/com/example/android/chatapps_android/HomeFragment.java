@@ -1,6 +1,7 @@
 package com.example.android.chatapps_android;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -61,7 +62,10 @@ public class HomeFragment extends Fragment {
             cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText (getContext(), "Clicked at activity " + finalI, Toast.LENGTH_SHORT).show();
+                    //Toast.makeText (getContext(), "Clicked at activity " + finalI, Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getActivity(), ImageButtonActivity.class);
+                    intent.putExtra("info", "This is activity from card item "+finalI );
+                    startActivity(intent);
                 }
             });
         }
