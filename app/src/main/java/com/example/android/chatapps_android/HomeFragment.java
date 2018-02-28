@@ -28,6 +28,7 @@ import com.squareup.picasso.Picasso;
 public class HomeFragment extends Fragment {
 
     GridLayout mainGrid;
+    ImageView ivBasicImage, ivBasicImage2, ivBasicImage3, ivBasicImage4, ivBasicImage5, ivBasicImage6;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -61,18 +62,18 @@ public class HomeFragment extends Fragment {
 
     private void setSingleEvent(GridLayout mainGrid) {
         String imageURL = "https://i.imgur.com/ql2DkPW.jpg";
-        ImageView ivBasicImage = (ImageView) mainGrid.findViewById(R.id.ivBasicImage);
-        Picasso.with(getContext()).load(imageURL).into(ivBasicImage);
-        ImageView ivBasicImage2 = (ImageView) mainGrid.findViewById(R.id.ivBasicImage2);
-        Picasso.with(getContext()).load(imageURL).into(ivBasicImage2);
-        ImageView ivBasicImage3 = (ImageView) mainGrid.findViewById(R.id.ivBasicImage3);
-        Picasso.with(getContext()).load(imageURL).into(ivBasicImage3);
-        ImageView ivBasicImage4 = (ImageView) mainGrid.findViewById(R.id.ivBasicImage4);
-        Picasso.with(getContext()).load(imageURL).into(ivBasicImage4);
-        ImageView ivBasicImage5 = (ImageView) mainGrid.findViewById(R.id.ivBasicImage5);
-        Picasso.with(getContext()).load(imageURL).into(ivBasicImage5);
-        ImageView ivBasicImage6 = (ImageView) mainGrid.findViewById(R.id.ivBasicImage6);
-        Picasso.with(getContext()).load(imageURL).into(ivBasicImage6);
+        ivBasicImage = (ImageView) mainGrid.findViewById(R.id.ivBasicImage);
+        Picasso.with(getContext()).load(imageURL).transform(new CircleTransform()).into(ivBasicImage);
+        ivBasicImage2 = (ImageView) mainGrid.findViewById(R.id.ivBasicImage2);
+        Picasso.with(getContext()).load(imageURL).transform(new CircleTransform()).into(ivBasicImage2);
+        ivBasicImage3 = (ImageView) mainGrid.findViewById(R.id.ivBasicImage3);
+        Picasso.with(getContext()).load(imageURL).transform(new CircleTransform()).into(ivBasicImage3);
+        ivBasicImage4 = (ImageView) mainGrid.findViewById(R.id.ivBasicImage4);
+        Picasso.with(getContext()).load(imageURL).transform(new CircleTransform()).into(ivBasicImage4);
+        ivBasicImage5 = (ImageView) mainGrid.findViewById(R.id.ivBasicImage5);
+        Picasso.with(getContext()).load(imageURL).transform(new CircleTransform()).into(ivBasicImage5);
+        ivBasicImage6 = (ImageView) mainGrid.findViewById(R.id.ivBasicImage6);
+        Picasso.with(getContext()).load(imageURL).transform(new CircleTransform()).into(ivBasicImage6);
 
         //Loop all child item of Main Grid
         for(int i=0; i<mainGrid.getChildCount(); i++)
