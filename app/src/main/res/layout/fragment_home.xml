@@ -43,8 +43,8 @@
                 <ImageView
                     android:id="@+id/ivBasicImage"
                     android:layout_gravity="center_horizontal"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp" />
+                    android:layout_width="70sp"
+                    android:layout_height="70sp" />
 
                 <TextView
                     android:text="Noah"
@@ -84,8 +84,8 @@
                 <ImageView
                     android:id="@+id/ivBasicImage2"
                     android:layout_gravity="center_horizontal"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp" />
+                    android:layout_width="70sp"
+                    android:layout_height="70sp" />
 
                 <TextView
                     android:text="Adam"
@@ -127,8 +127,8 @@
                 <ImageView
                     android:id="@+id/ivBasicImage3"
                     android:layout_gravity="center_horizontal"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp" />
+                    android:layout_width="70sp"
+                    android:layout_height="70sp" />
 
                 <TextView
                     android:text="Warlock"
@@ -168,8 +168,8 @@
                 <ImageView
                     android:id="@+id/ivBasicImage4"
                     android:layout_gravity="center_horizontal"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp" />
+                    android:layout_width="70sp"
+                    android:layout_height="70sp" />
 
                 <TextView
                     android:text="Amy"
@@ -211,8 +211,8 @@
                 <ImageView
                     android:id="@+id/ivBasicImage5"
                     android:layout_gravity="center_horizontal"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp" />
+                    android:layout_width="70sp"
+                    android:layout_height="70sp" />
 
                 <TextView
                     android:text="Felicia"
@@ -252,8 +252,8 @@
                 <ImageView
                     android:id="@+id/ivBasicImage6"
                     android:layout_gravity="center_horizontal"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp" />
+                    android:layout_width="70sp"
+                    android:layout_height="70sp" />
 
                 <TextView
                     android:text="John"
