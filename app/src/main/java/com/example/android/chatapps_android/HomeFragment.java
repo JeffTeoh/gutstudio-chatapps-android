@@ -28,7 +28,7 @@ import com.squareup.picasso.Picasso;
 public class HomeFragment extends Fragment {
 
     GridLayout mainGrid;
-    ImageView ivBasicImage, ivBasicImage2, ivBasicImage3, ivBasicImage4, ivBasicImage5, ivBasicImage6;
+    ImageView ivBasicImage, ivBasicImage2, ivBasicImage3, ivBasicImage4, ivBasicImage5, ivBasicImage6, ivBasicImage7, ivBasicImage8;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -44,18 +44,6 @@ public class HomeFragment extends Fragment {
 
         //set Event
         setSingleEvent (mainGrid);
-
-        final SwipeRefreshLayout mSwipeRefreshLayout = (SwipeRefreshLayout) v.findViewById(R.id.fragment_home);
-
-        mSwipeRefreshLayout.setOnRefreshListener(
-                new SwipeRefreshLayout.OnRefreshListener() {
-                    @Override
-                    public void onRefresh() {
-                        ((tabviewChatbox) getActivity()).refreshNow();
-                        Toast.makeText(getContext(), "Refreshed", Toast.LENGTH_LONG).show();
-                    }
-                }
-        );
 
         return v;
     }
@@ -74,6 +62,10 @@ public class HomeFragment extends Fragment {
         Picasso.with(getContext()).load(imageURL).transform(new CircleTransform()).into(ivBasicImage5);
         ivBasicImage6 = (ImageView) mainGrid.findViewById(R.id.ivBasicImage6);
         Picasso.with(getContext()).load(imageURL).transform(new CircleTransform()).into(ivBasicImage6);
+        ivBasicImage7 = (ImageView) mainGrid.findViewById(R.id.ivBasicImage7);
+        Picasso.with(getContext()).load(imageURL).transform(new CircleTransform()).into(ivBasicImage7);
+        ivBasicImage8 = (ImageView) mainGrid.findViewById(R.id.ivBasicImage8);
+        Picasso.with(getContext()).load(imageURL).transform(new CircleTransform()).into(ivBasicImage8);
 
         //Loop all child item of Main Grid
         for(int i=0; i<mainGrid.getChildCount(); i++)
@@ -86,7 +78,7 @@ public class HomeFragment extends Fragment {
                 public void onClick(View view) {
                     //Toast.makeText (getContext(), "Clicked at activity " + finalI, Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getActivity(), ImageButtonActivity.class);
-                    intent.putExtra("info", "This is activity from card item "+finalI );
+                    intent.putExtra("info", "This is activity from card item "+ (finalI+1) );
                     startActivity(intent);
                 }
             });
