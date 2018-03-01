@@ -5,16 +5,12 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
 
-    private final ArrayList<Fragment> fragments = new ArrayList<>();
-    private final ArrayList<String> tabTitles = new ArrayList<>();
-
-    public void addFragments (Fragment fragments,String tabTitles){
-        this.fragments.add(fragments);
-        this.tabTitles.add(tabTitles);
-    }
+    private final List<Fragment> lstFragment = new ArrayList<>();
+    private final List<String> lstTitles = new ArrayList<>();
 
     public ViewPagerAdapter(FragmentManager fm) {
         super(fm);
@@ -22,16 +18,22 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return fragments.get(position);
+        return lstFragment.get(position);
     }
 
     @Override
     public int getCount() {
-        return fragments.size();
+        return lstFragment.size();
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return tabTitles.get(position);
+        return lstTitles.get(position);
     }
+
+    public void AddFragment (Fragment fragment,String title){
+        lstFragment.add(fragment);
+        lstTitles.add(title);
+    }
+
 }

@@ -37,8 +37,8 @@ public class tabviewChatbox extends AppCompatActivity {
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
 
         //Add fragments
-        viewPagerAdapter.addFragments(new HomeFragment(), "CHAT");
-        viewPagerAdapter.addFragments(new AwayFragment(), "CONTACTS");
+        viewPagerAdapter.AddFragment(new HomeFragment(), "CHAT");
+        viewPagerAdapter.AddFragment(new AwayFragment(), "CONTACTS");
 
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
