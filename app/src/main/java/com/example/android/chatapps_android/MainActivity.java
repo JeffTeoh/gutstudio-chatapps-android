@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    //new activity from login page
     public void chatbox (View view){
         final Intent intent = new Intent(this, tabviewChatbox.class);
         fbLoginManager = com.facebook.login.LoginManager.getInstance();
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
         bLogin = (Button) findViewById(R.id.bLogin);
 
+        //only start activity if login success
         LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
@@ -91,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
         graphRequest.executeAsync();
     }
 
+    //Function calling for integration of font awesome, can directly put icon inside default button by typing name
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(IconicsContextWrapper.wrap(newBase));
