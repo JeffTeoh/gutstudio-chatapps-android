@@ -2,16 +2,14 @@ package com.example.android.chatapps_android;
 
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import java.util.ArrayList;
-import java.util.List;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
 
 
 /**
@@ -19,44 +17,55 @@ import java.util.List;
  */
 public class AwayFragment extends Fragment {
 
-    View v;
-    private RecyclerView myrecyclerview;
-    private List<Contact> lstContact;
-
-
 
     public AwayFragment() {
         // Required empty public constructor
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_away, container, false);
         // Inflate the layout for this fragment
-        v = inflater.inflate(R.layout.fragment_away, container, false);
-        myrecyclerview = (RecyclerView) v.findViewById(R.id.contact_recyclerview);
-        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(getContext(), lstContact);
-        myrecyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));
-        myrecyclerview.setAdapter(recyclerViewAdapter);
-        return v;
+        String[] awayStrings = {
+                "Noah",
+                "Emma",
+                "Liam",
+                "Olivia",
+                "Jason",
+                "Ava",
+                "William",
+                "Isabella",
+                "Ethan",
+                "James",
+                "Abigail",
+                "Alex",
+                "Kelvin",
+                "Daniel",
+                "Michael",
+                "Michelle"
+        };
+
+        ListView lv = (ListView) view.findViewById(R.id.listView2);
+
+        ArrayAdapter<String> lva = new ArrayAdapter<String>(
+                getActivity(), android.R.layout.simple_list_item_1, awayStrings);
+        lv.setAdapter(lva);
+
+        final SwipeRefreshLayout mSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.fragment_away);
+
+        mSwipeRefreshLayout.setOnRefreshListener(
+                new SwipeRefreshLayout.OnRefreshListener() {
+                    @Override
+                    public void onRefresh() {
+                        ((tabviewChatbox) getActivity()).refreshNow();
+                        Toast.makeText(getContext(), "Refreshed", Toast.LENGTH_LONG).show();
+                    }
+                }
+        );
+
+        return view;
     }
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        lstContact = new ArrayList<>();
-        lstContact.add(new Contact("Aaron", "Available", R.drawable.apex));
-        lstContact.add(new Contact("David", "Busy", R.drawable.pt_logo));
-        lstContact.add(new Contact("John", "Not Available", R.drawable.usm_baru_2_jpg));
-        lstContact.add(new Contact("Aaron", "Available", R.drawable.skkt));
-        lstContact.add(new Contact("David", "Busy", R.drawable.apex));
-        lstContact.add(new Contact("John", "Not Available", R.drawable.pt_logo));
-        lstContact.add(new Contact("Aaron", "Available", R.drawable.usm_baru_2_jpg));
-        lstContact.add(new Contact("David", "Busy", R.drawable.skkt));
-        lstContact.add(new Contact("John", "Not Available", R.drawable.apex));
-        lstContact.add(new Contact("Aaron", "Available", R.drawable.pt_logo));
-        lstContact.add(new Contact("David", "Busy", R.drawable.usm_baru_2_jpg));
-        lstContact.add(new Contact("John", "Not Available", R.drawable.skkt));
-    }
 }
