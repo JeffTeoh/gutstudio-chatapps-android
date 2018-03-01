@@ -1,5 +1,6 @@
 package com.example.android.chatapps_android;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -13,6 +14,15 @@ public class tabview extends AppCompatActivity {
     private ViewPager viewPager;
     private ViewPagerAdapter adapter;
 
+    //Exit button will quit the apps
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +35,7 @@ public class tabview extends AppCompatActivity {
 
         // Add fragments
 
+        adapter.AddFragment(new HomeFragment(), "Chat");
         adapter.AddFragment(new FragmentContact(), "Contact");
 
         viewPager.setAdapter(adapter);
