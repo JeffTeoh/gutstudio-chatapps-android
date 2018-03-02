@@ -23,7 +23,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".tabviewChatbox" />
-        <activity android:name=".ImageButtonActivity"></activity>
+        <activity android:name=".ImageButtonActivity" />
+        <activity android:name=".tabview" />
+        <activity android:name=".chatui"></activity>
     </application>
 
 </manifest>
