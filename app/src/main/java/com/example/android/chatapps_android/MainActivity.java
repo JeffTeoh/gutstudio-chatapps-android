@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
             public void onSuccess(LoginResult loginResult) {
                 graphRequest(loginResult.getAccessToken());
                 startActivity(intent);
+                finish();
             }
 
             @Override
