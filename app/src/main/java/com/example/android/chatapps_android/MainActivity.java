@@ -53,12 +53,11 @@ public class MainActivity extends AppCompatActivity {
         bLogin = (Button) findViewById(R.id.bLogin);
 
         //only start activity if login success
-        LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+        fbLoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
                 graphRequest(loginResult.getAccessToken());
                 startActivity(intent);
-                finish();
             }
 
             @Override
@@ -75,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         bLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               LoginManager.getInstance().logInWithReadPermissions(MainActivity.this, Arrays.asList("public_profile", "email", "user_birthday", "user_friends"));
+               fbLoginManager.getInstance().logInWithReadPermissions(MainActivity.this, Arrays.asList("public_profile", "email", "user_birthday", "user_friends"));
             }
         });
     }
