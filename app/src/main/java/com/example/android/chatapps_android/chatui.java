@@ -15,9 +15,9 @@ public class chatui extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chatui);
 
-        /*toolbar_chatui = (Toolbar) findViewById(R.id.toolbar_chatcontact);
+        toolbar_chatui = (Toolbar) findViewById(R.id.toolbar_chatcontact);
         toolbar_chatui.setTitle("Chat Apps");
         toolbar_chatui.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
-        setSupportActionBar(toolbar_chatui);*/
+        setSupportActionBar(toolbar_chatui);
     }
 }
