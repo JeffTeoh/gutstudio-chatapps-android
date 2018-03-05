@@ -22,8 +22,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".tabviewChatbox" />
-        <activity android:name=".ImageButtonActivity" />
+        <activity android:name=".tabviewChatbox"
+            android:launchMode="singleTop"/>
+        <activity android:name=".ImageButtonActivity"
+            android:parentActivityName=".tabviewChatbox">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".tabviewChatbox"/>
+        </activity>
         <activity android:name=".tabview" />
         <activity android:name=".chatui"></activity>
     </application>

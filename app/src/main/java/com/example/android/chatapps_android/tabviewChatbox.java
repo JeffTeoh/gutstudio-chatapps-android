@@ -38,7 +38,7 @@ public class tabviewChatbox extends AppCompatActivity {
 
         //Add fragments
         viewPagerAdapter.AddFragment(new HomeFragment(), "CHAT");
-        viewPagerAdapter.AddFragment(new AwayFragment(), "CONTACTS");
+        viewPagerAdapter.AddFragment(new FragmentContact(), "CONTACTS");
 
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
@@ -49,13 +49,4 @@ public class tabviewChatbox extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.tabviewtoolbar, menu);
         return super.onCreateOptionsMenu(menu);
     }
-
-    public void refreshNow (){
-        finish();
-        overridePendingTransition( 0, 0);
-        startActivity(getIntent());
-        overridePendingTransition( 0, 0);
-    }
-
-
 }
