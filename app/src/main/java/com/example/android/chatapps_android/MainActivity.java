@@ -46,14 +46,14 @@ public class MainActivity extends AppCompatActivity {
 
     //new activity from login page
     public void chatbox (View view){
-        final Intent intent = new Intent(this, tabview.class);
+        final Intent intent = new Intent(this, tabviewChatbox.class);
         fbLoginManager = com.facebook.login.LoginManager.getInstance();
         callbackManager = CallbackManager.Factory.create();
 
         bLogin = (Button) findViewById(R.id.bLogin);
 
         //only start activity if login success
-        LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+        fbLoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
                 graphRequest(loginResult.getAccessToken());
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         bLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               LoginManager.getInstance().logInWithReadPermissions(MainActivity.this, Arrays.asList("public_profile", "email", "user_birthday", "user_friends"));
+               fbLoginManager.getInstance().logInWithReadPermissions(MainActivity.this, Arrays.asList("public_profile", "email", "user_birthday", "user_friends"));
             }
         });
     }

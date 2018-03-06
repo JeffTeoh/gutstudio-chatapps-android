@@ -4,8 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="8dp"
     tools:context="com.example.android.chatapps_android.chatui">
+
+    <android.support.design.widget.AppBarLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <android.support.v7.widget.Toolbar
+           android:id="@+id/toolbar_chatcontact"
+           android:layout_width="match_parent"
+           android:layout_height="?attr/actionBarSize"
+           android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+       </android.support.v7.widget.Toolbar>
+
+   </android.support.design.widget.AppBarLayout>
     
     <LinearLayout
         android:id="@+id/layout_chatbox"

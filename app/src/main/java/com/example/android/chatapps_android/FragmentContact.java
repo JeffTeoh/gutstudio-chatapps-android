@@ -41,10 +41,6 @@ public class FragmentContact extends Fragment {
         super.onCreate(savedInstanceState);
 
         lstContact = new ArrayList<>();
-       lstContact.add(new Contact("Aaron", "Available", R.drawable.ic_search_black_24dp));
-        lstContact.add(new Contact("Jason", "Busy", R.drawable.ic_search_black_24dp));
-        lstContact.add(new Contact("Abigail", "Away", R.drawable.ic_search_black_24dp));
-        lstContact.add(new Contact("Steven", "Offline", R.drawable.ic_search_black_24dp));
         lstContact.add(new Contact("Aaron", "Available", R.drawable.ic_search_black_24dp));
         lstContact.add(new Contact("Jason", "Busy", R.drawable.ic_search_black_24dp));
         lstContact.add(new Contact("Abigail", "Away", R.drawable.ic_search_black_24dp));
@@ -53,6 +49,9 @@ public class FragmentContact extends Fragment {
         lstContact.add(new Contact("Jason", "Busy", R.drawable.ic_search_black_24dp));
         lstContact.add(new Contact("Abigail", "Away", R.drawable.ic_search_black_24dp));
         lstContact.add(new Contact("Steven", "Offline", R.drawable.ic_search_black_24dp));
-
+        lstContact.add(new Contact("Aaron", "Available", R.drawable.ic_search_black_24dp));
+        lstContact.add(new Contact("Jason", "Busy", R.drawable.ic_search_black_24dp));
+        lstContact.add(new Contact("Abigail", "Away", R.drawable.ic_search_black_24dp));
+        lstContact.add(new Contact("Steven", "Offline", R.drawable.ic_search_black_24dp));
     }
 }

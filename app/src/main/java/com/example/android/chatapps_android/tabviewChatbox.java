@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class tabviewChatbox extends AppCompatActivity {
     Toolbar toolbar;
@@ -38,7 +39,7 @@ public class tabviewChatbox extends AppCompatActivity {
 
         //Add fragments
         viewPagerAdapter.AddFragment(new HomeFragment(), "CHAT");
-        viewPagerAdapter.AddFragment(new AwayFragment(), "CONTACTS");
+        viewPagerAdapter.AddFragment(new FragmentContact(), "CONTACTS");
 
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
@@ -50,12 +51,9 @@ public class tabviewChatbox extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    public void refreshNow (){
-        finish();
-        overridePendingTransition( 0, 0);
-        startActivity(getIntent());
-        overridePendingTransition( 0, 0);
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Toast.makeText(tabviewChatbox.this, "Log out", Toast.LENGTH_SHORT).show();
+        return super.onOptionsItemSelected(item);
     }
-
-
 }

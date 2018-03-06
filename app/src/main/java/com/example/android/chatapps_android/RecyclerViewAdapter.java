@@ -53,9 +53,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.tv_name.setText(mData.get(position).getName());
         holder.tv_status.setText(mData.get(position).getStatus());
         holder.img.setImageResource(mData.get(position).getPhoto());
-
-
-
     }
 
     @Override
